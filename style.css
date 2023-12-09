@@ -1,5 +1,7 @@
 :root{
-    --background: #fff: 
+    --background: #FFC1CC;
+    --high-lgt: #ff6ec7;
+    --bright: #FF007F;
 }
 
 
@@ -10,23 +12,30 @@
 }
 
 
-
-
 body{
-    background: #222;
+    background: var(--background);
 }
 
-.content{
+.logo{
+    color: #fff;
+}
+
+.logo2{
+    color: palevioletred;
+}
+
+/* .content{
     height: 200vh;
-    background-image: url(img/background.avif);
-    background-color: #333;
+    background-color: var(--background);
     background-blend-mode: multiply;
     background-size: cover;
     display: grid;
     place-items: center;
-} 
+}  */
 
 /* navigation styles start here */
+
+/* Mobile CSS */
 
 header{
     background: var(--background);
@@ -34,6 +43,7 @@ header{
     position: fixed;
     z-index: 100;
     width: 100%;
+    border: solid 1px black;
 }
 
 .nav-toggle{
@@ -107,7 +117,7 @@ nav a{
 }
 
 nav a:hover{
-    color: #000;
+    color: var(--bright);
 }
 
 .nav-toggle:checked ~ nav{
@@ -118,6 +128,14 @@ nav a:hover{
     opacity: 1;
     transition: opacity 250ms ease-in-out 250ms;
 }
+
+
+
+
+/* Laptop / Desk Top CSS */
+
+
+
 
 @media screen and (min-width: 600px){
     .nav-toggle-label{
@@ -155,7 +173,7 @@ nav a:hover{
         content: '';
         display: block;
         height: 5px;
-        background: #000;
+        background: var(--bright);
         position: absolute;
         top: -.25em;
         left: 0;
